@@ -72,22 +72,7 @@ public class Log_UI_Controller {
             usename.setText("");
             password.setText("");
         }
-        //3、判断用户名的密码是否正确
-        /*if (un.equals("123") && pd.endsWith("123")) {
-        Stage oldstage = (Stage) loginbutton.getScene().getWindow();
 
-            oldstage.close();
-            Main_UI main_ui = new Main_UI();
-        } else {
-            label.setVisible(true);
-            *//*Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("登录失败");
-            alert.setHeaderText("用户名或密码错误");
-            alert.setContentText("请再尝试");
-            alert.showAndWait();*//*
-            usename.setText("");
-            password.setText("");
-        }*/
     }
 
     @FXML
