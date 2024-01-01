@@ -29,4 +29,5 @@ public class Main_UI extends Application {
     public void start(Stage primaryStage) throws Exception {
 
     }
+    // url(file:/E:/java/idea运行/wangyi/image/return.png)
 }

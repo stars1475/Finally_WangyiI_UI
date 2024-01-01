@@ -40,6 +40,8 @@ public class Main_UI_Controller {
     private Slider rolling;
 
     @FXML
+    private Slider sound;
+    @FXML
     void bigaction(ActionEvent event) {
         Stage stage = (Stage) big.getScene().getWindow();
         stage.setMaximized(true);
@@ -90,4 +92,46 @@ public class Main_UI_Controller {
         mediaPlayer.seek(new Duration(rolling.getValue() * 1000));
     }
 
+    void soundevent(){
+        sound = new Slider(0, 100, 1);
+        sound.setShowTickLabels(true);
+        sound.setShowTickMarks(true);
+        sound.setMajorTickUnit(0.25);
+        sound.setMinorTickCount(5);
+    }
+    @FXML
+    void az(MouseEvent event) {
+        sound.valueProperty().addListener((observable, oldValue, newValue) -> {
+            mediaPlayer.setVolume(newValue.doubleValue());
+        });
+    }
+    @FXML
+    void sf(MouseEvent event) {
+        sound.valueProperty().addListener((observable, oldValue, newValue) -> {
+            mediaPlayer.setVolume(newValue.doubleValue());
+        });
+    }
+
+    /*
+    Slider volumeSlider = new Slider(0, 100, 50);
+        volumeSlider.setShowTickLabels(true);
+        volumeSlider.setShowTickMarks(true);
+        volumeSlider.setMajorTickUnit(25);
+        volumeSlider.setMinorTickCount(5);
+
+        volumeSlider.setOnMouseDragged(event -> {
+            double value = volumeSlider.getValue();
+            // 根据value的值调节音量
+            double volume = value / 100.0; // 将0-100的值转换为0-1的值
+            System.out.println("Volume: " + volume);
+            // 在这里可以调用相应的音量调节逻辑
+        });
+
+        VBox root = new VBox(volumeSlider);
+        Scene scene = new Scene(root, 300, 150);
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Volume Slider Example");
+        primaryStage.show();
+     */
 }

@@ -1,4 +1,4 @@
-package logon;
+package Register;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,12 +9,13 @@ import javafx.stage.StageStyle;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Log_UI extends Application {
-    public Log_UI() throws IOException {
+public class Register_UI extends Application {
 
-        URL url = new File("src/logon/Log_UI.fxml").toURI().toURL();
+    public Register_UI() throws IOException {
+        URL url = new File("src/Register/Register_UI.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         Stage stage = new Stage();
         Scene scene = new Scene(root, 450, 640);
